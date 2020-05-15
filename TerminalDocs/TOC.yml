@@ -1,0 +1,46 @@
+- name: Windows-Terminal
+  items:
+    - name: Übersicht
+      href: index.md
+    - name: Erste Schritte
+      href: get-started.md
+    - name: Einstellungen anpassen
+      items:
+        - name: Globale Einstellungen
+          href: customize-settings/global-settings.md
+        - name: Profileinstellungen
+          href: customize-settings/profile-settings.md
+        - name: Farbschemas
+          href: customize-settings/color-schemes.md
+        - name: Tastenbindungen
+          href: customize-settings/key-bindings.md
+    - name: Befehlszeilenargumente
+      href: command-line-arguments.md
+    - name: Dynamische Profile
+      href: dynamic-profiles.md
+    - name: Suchen
+      href: search.md
+    - name: Bereiche
+      href: panes.md
+    - name: Cascadia Code
+      href: cascadia-code.md
+    - name: Lernprogramme
+      items:
+        - name: Leitungseinrichtung
+          href: tutorials/powerline-setup.md
+        - name: SSH
+          href: tutorials/ssh.md
+        - name: Registerkartentitel festlegen
+          href: tutorials/tab-title.md
+    - name: Katalog für benutzerdefiniertes Terminal
+      items:
+        - name: Leitung in PowerShell
+          href: custom-terminal-gallery/powerline-in-powershell.md
+        - name: Raspberry Ubuntu
+          href: custom-terminal-gallery/raspberry-ubuntu.md
+        - name: Design „Milchglas“
+          href: custom-terminal-gallery/frosted-glass-theme.md
+        - name: Eingabeaufforderung im Retrostil
+          href: custom-terminal-gallery/retro-command-prompt.md
+    - name: Problembehandlung
+      href: troubleshooting.md
