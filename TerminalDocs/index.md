@@ -7,12 +7,12 @@ ms.date: 05/19/2020
 ms.topic: overview
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: cfefc48d19db97e18429a4653afe8cad9cd811ca
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: ab29130e34e6d3adbda37a002a03383211d27bce
+ms.sourcegitcommit: a77ad8aec5bbeba1e58a92c49dc2ebd67a426ae7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416645"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866362"
 ---
 # <a name="what-is-windows-terminal"></a>Informationen zu Windows Terminal
 
@@ -35,7 +35,7 @@ Sie können Ihr Windows Terminal so konfigurieren, dass es über eine Vielzahl v
 
 Es gibt eine Vielzahl von benutzerdefinierten Tastenzuordnungen, die Sie in Windows Terminal verwenden können, damit es sich für Sie natürlicher anfühlt. Wenn Ihnen eine bestimmte Tastenzuordnung nicht gefällt, können Sie sie nach Belieben ändern.
 
-Beispielsweise ist die standardmäßige Tastenkombination zum Kopieren von Text über die Befehlszeile <kbd>STRG+UMSCHALT+C</kbd>. Sie können dies in <kbd>STRG+1</kbd> (oder was immer Sie bevorzugen) ändern. Die Standardtastenkombination zum Öffnen einer neuen Registerkarte ist <kbd>STRG+T</kbd>, aber vielleicht möchten Sie dies in <kbd>STRG+2</kbd> ändern. Die Standardtastenkombination für den Wechsel zwischen den geöffneten Registerkarten ist <kbd>STRG+TAB</kbd>. Dies kann aber in <kbd>STRG+-</kbd> geändert verwendet werden, und stattdessen zum Erstellen einer neuen Registerkarte verwendet werden.
+Beispielsweise ist die standardmäßige Tastenkombination zum Kopieren von Text über die Befehlszeile <kbd>STRG+UMSCHALT+C</kbd>. Sie können dies in <kbd>STRG+1</kbd> (oder was immer Sie bevorzugen) ändern. Die Standardtastenkombination zum Öffnen einer neuen Registerkarte ist <kbd>STRG+UMSCHALT+T</kbd>, aber vielleicht möchten Sie dies in <kbd>STRG+2</kbd> ändern. Die Standardtastenkombination für den Wechsel zwischen den geöffneten Registerkarten ist <kbd>STRG+TAB</kbd>. Dies kann aber in <kbd>STRG+-</kbd> geändert verwendet werden, und stattdessen zum Erstellen einer neuen Registerkarte verwendet werden.
 
 Weitere Informationen zum Anpassen der Tastenzuordnungen finden Sie auf der Seite [Tastenzuordnungen](./customize-settings/key-bindings.md).
 
