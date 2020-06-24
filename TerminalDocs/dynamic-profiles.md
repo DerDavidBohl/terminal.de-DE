@@ -6,12 +6,12 @@ ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: concept
 ms.service: terminal
-ms.openlocfilehash: 9c54dc2182584873d9d0c1358083d5142d07ef48
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: 7ab394cea84eaab08b14edf859ef0cd9390d7267
+ms.sourcegitcommit: a489b75e14e2c123bf6b4ac2a15ff85b515564be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416125"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83553192"
 ---
 # <a name="dynamic-profiles-in-windows-terminal"></a>Dynamische Profile in Windows Terminal
 

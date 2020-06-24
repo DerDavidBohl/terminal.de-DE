@@ -3,16 +3,16 @@ title: Windows Terminal-Tastenzuordnungen
 description: Erfahren Sie, wie Sie benutzerdefinierte Tastenzuordnungen für Windows Terminal erstellen können.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 06/18/2020
 ms.topic: how-to
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 76bf91f8d7c2b49c2dc6bcf0c83640b57b2acd01
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: 2716e3bfbbc290eb3f2bdce58d0de5c12ee3225d
+ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994290"
 ---
 # <a name="custom-key-bindings-in-windows-terminal"></a>Benutzerdefinierte Tastenzuordnungen in Windows Terminal
 
@@ -155,17 +155,27 @@ Hiermit wird das Dropdownmenü geöffnet.
 { "command": "openNewTabDropdown", "keys": "ctrl+shift+space" }
 ```
 
-### <a name="open-settings-file"></a>Einstellungsdatei öffnen
+### <a name="open-settings-files"></a>Einstellungsdateien öffnen
 
-Hiermit wird die Einstellungsdatei geöffnet.
+Hiermit werden entweder die standardmäßigen oder die benutzerdefinierten Einstellungsdateien geöffnet. Ohne das Feld `target` wird die settings.json-Datei geöffnet.
 
 **Befehlsname:** `openSettings`
 
 **Standardzuordnung:**
 
 ```json
-{ "command": "openSettings", "keys": "ctrl+," }
+{ "command": "openSettings", "keys": "ctrl+," },
+{ "command": { "action": "openSettings", "target": "defaultsFile" }, "keys": "ctrl+alt+," },
 ```
+
+#### <a name="actions"></a>Aktionen
+
+| Name | Erfordernis | Akzeptierter Typ | Beschreibung |
+| ---- | --------- | ------- | ----------- |
+| `target` | Optional | `"settingsFile"`, `"defaultsFile"`, `"allFiles"` | Die zu öffnende Einstellungsdatei. |
+
+> [!IMPORTANT]
+> Das Feld `target` steht nur in der [Windows Terminal-Vorschau](https://aka.ms/terminal-preview/) zur Verfügung.
 
 ### <a name="toggle-full-screen"></a>Vollbildmodus ein-/ausschalten
 

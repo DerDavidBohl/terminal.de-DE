@@ -7,12 +7,12 @@ ms.date: 05/19/2020
 ms.topic: quickstart
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 901e3a0f447cdfe19a69ee43c7f76ed529d87108
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: e804f94643835b2286e1d7aa11c84334c4223889
+ms.sourcegitcommit: d8e23557224bc50a82a36dc80ac68b9d11dfdde9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415845"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720106"
 ---
 # <a name="install-and-set-up-windows-terminal"></a>Installieren und Einrichten von Windows Terminal
 

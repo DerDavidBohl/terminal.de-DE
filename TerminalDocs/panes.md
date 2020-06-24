@@ -3,21 +3,23 @@ title: Windows Terminal-Bereiche
 description: Erfahren Sie, wie Sie Bereiche in Windows Terminal unterteilen.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 06/18/2020
 ms.topic: how-to
 ms.service: terminal
-ms.openlocfilehash: 5d13d48d8e9317c229720937f916f57769da7261
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: 0e2d7a50e1a3c933f7ab2d98bda5be6b8ee44e7e
+ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416305"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994326"
 ---
 # <a name="panes-in-windows-terminal"></a>Bereiche in Windows Terminal
 
 Bereiche bieten Ihnen die Möglichkeit, mehrere Befehlszeilenanwendungen nebeneinander auf derselben Registerkarte auszuführen. Dadurch ist es nicht mehr erforderlich, zwischen Registerkarten zu wechseln, und Sie können mehrere Eingabeaufforderungen gleichzeitig anzeigen.
 
 ## <a name="creating-a-new-pane"></a>Erstellen eines neuen Bereichs
+
+### <a name="using-the-keyboard"></a>Mithilfe der Tastatur
 
 Sie können entweder einen neuen vertikalen oder horizontalen Bereich in Windows Terminal erstellen. Bei vertikaler Teilung wird ein neuer Bereich rechts von dem Bereich geöffnet, der den Fokus enthält. Bei horizontaler Teilung wird ein neuer Bereich unterhalb des Bereichs geöffnet, der den Fokus enthält. Wenn Sie einen neuen vertikalen Bereich für Ihr Standardprofil erstellen möchten, können Sie <kbd>ALT+UMSCHALT+PLUS</kbd> (+) eingeben. Wenn Sie einen horizontalen Bereich für Ihr Standardprofil erstellen möchten, können Sie <kbd>ALT+UMSCHALT+MINUS</kbd> (-) eingeben.
 
@@ -31,6 +33,15 @@ Wenn Sie diese Tastenzuordnungen ändern möchten, können Sie neue erstellen, i
 { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "alt+shift+-" },
 { "command": { "action": "splitPane", "split": "auto" }, "keys": "alt+shift+|" }
 ```
+
+### <a name="using-the-dropdown-menu-preview"></a>Mithilfe des Dropdownmenüs ([Vorschau](https://aka.ms/terminal-preview/))
+
+Wenn Sie einen neuen Bereich über das Dropdownmenü öffnen möchten, können Sie <kbd>ALT</kbd> gedrückt halten und auf das gewünschte Profil klicken. Dadurch erfolgt eine `auto`-Aufteilung des aktiven Fensters oder Bereichs in einen neuen Bereich des ausgewählten Profils. Der `auto`-Aufteilungsmodus teilt beim Erstellen eines Bereichs in der Richtung der längsten Kante.
+
+![Windows Terminal-Dropdownbereich](./images/alt-click-pane.gif)
+
+> [!IMPORTANT]
+> Diese Funktion steht nur in der [Windows Terminal-Vorschau](https://aka.ms/terminal-preview/) zur Verfügung.
 
 ## <a name="switching-between-panes"></a>Wechseln zwischen Bereichen
 

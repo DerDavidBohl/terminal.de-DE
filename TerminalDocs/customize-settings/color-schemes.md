@@ -7,14 +7,14 @@ ms.date: 05/19/2020
 ms.topic: how-to
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 4c4b602f2d8d6e3da20ef0b26845517e4512fd87
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: 9f7e6133a08a21c3b77689cd8dce32dacbf80351
+ms.sourcegitcommit: d8e23557224bc50a82a36dc80ac68b9d11dfdde9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415915"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720136"
 ---
-# <a name="color-schemes-in-the-windows-terminal"></a>Farbschemas in Windows Terminal
+# <a name="color-schemes-in-windows-terminal"></a>Farbschemas in Windows Terminal
 
 ## <a name="creating-your-own-color-scheme"></a>Erstellen eines eigenen Farbschemas
 
@@ -25,7 +25,7 @@ Farbschemata können im `schemes`-Array Ihrer Datei „settings.json“ definier
     "name" : "Campbell",
 
     "cursorColor": "#FFFFFF",
-    "selectionBackground": "#",
+    "selectionBackground": "#FFFFFF",
 
     "background" : "#0C0C0C",
     "foreground" : "#CCCCCC",

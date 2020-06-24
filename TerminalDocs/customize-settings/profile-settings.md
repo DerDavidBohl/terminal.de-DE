@@ -3,18 +3,18 @@ title: Windows Terminal-Profileinstellungen
 description: Erfahren Sie, wie die einzelnen Profile in Windows Terminal angepasst werden.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 06/18/2020
 ms.topic: how-to
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 309fb40736718df7d1670a7376806b70ef0e35fe
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: ad7121f9cd6583562c03bf0e35d2928f46fe5d91
+ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416085"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994393"
 ---
-# <a name="profile-settings-in-the-windows-terminal"></a>Profileinstellungen in Windows Terminal
+# <a name="profile-settings-in-windows-terminal"></a>Profileinstellungen in Windows Terminal
 
 Die unten aufgeführten Einstellungen sind spezifisch für die einzelnen eindeutigen Profile. Wenn Sie möchten, dass eine Einstellung auf alle Profile angewendet wird, können Sie sie dem Abschnitt `defaults` über der Profilliste in der Datei „settings.json“ hinzufügen.
 
@@ -80,6 +80,9 @@ Dies ist das Verzeichnis, in dem die Shell beim Laden gestartet wird.
 **Standardwert:** `"%USERPROFILE%"`
 
 <br />
+
+> [!NOTE]
+> Wenn Sie das Startverzeichnis festlegen, in dem die installierten WSL-Distributionen geöffnet werden, sollten Sie folgendes Format verwenden: „startingdirectory“: „//WSL$/<distro name>“, wobei Sie den Namen Ihrer Distribution einsetzen. Beispielsweise „startingDirectory“: „//wsl$/Ubuntu-20.04“.
 
 ___
 
@@ -176,6 +179,21 @@ Hiermit wird der Schriftgrad des Profils in Punkt festgelegt.
 
 **Standardwert:** `12`
 
+### <a name="font-weight-preview"></a>Schriftbreite ([Vorschau](https://aka.ms/terminal-preview/))
+
+Dadurch wird die Breite (Dünne oder Dicke der Striche) für die Schriftart des Profils festgelegt.
+
+**Eigenschaftenname:** `fontWeight`
+
+**Erfordernis:** Optional
+
+**Akzeptiert:** `"normal"`, `"thin"`, `"extra-light"`, `"light"`, `"semi-light"`, `"medium"`, `"semi-bold"`, `"bold"`, `"extra-bold"`, `"black"`, `"extra-black"` oder eine Ganzzahl, die der numerischen Darstellung der OpenType-Schriftbreite entspricht
+
+**Standardwert:** `"normal"`
+
+> [!IMPORTANT]
+> Diese Funktion steht nur in der [Windows Terminal-Vorschau](https://aka.ms/terminal-preview/) zur Verfügung.
+
 ### <a name="padding"></a>Abstand
 
 :::row:::
@@ -248,6 +266,27 @@ Hiermit wird die prozentuale Höhe des Cursors ab dem unteren Rand festgelegt. D
 **Erfordernis:** Optional
 
 **Akzeptiert:** Ganzzahl zwischen 25 und 100
+
+<br />
+
+___
+
+## <a name="keyboard-settings"></a>Tastatureinstellungen
+
+### <a name="altgr-aliasing-preview"></a>AltGr-Aliasing ([Vorschau](https://aka.ms/terminal-preview/))
+
+Hiermit können Sie steuern, ob Windows Terminal <kbd>STRG+ALT</kbd> als Alias für <kbd>ALTGR</kbd> behandelt.
+
+**Eigenschaftenname:** `altGrAliasing`
+
+**Erfordernis:** Optional
+
+**Akzeptiert:** `true`, `false`
+
+**Standardwert:** `true`
+
+> [!IMPORTANT]
+> Diese Funktion steht nur in der [Windows Terminal-Vorschau](https://aka.ms/terminal-preview/) zur Verfügung.
 
 <br />
 

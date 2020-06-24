@@ -7,12 +7,12 @@ ms.date: 05/19/2020
 ms.topic: overview
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 29d3ce72210c30fcbf38393d733c6157670465bb
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: ce2fe1e2efb26fe413b23a4e7ab08dcf0e0ed8dc
+ms.sourcegitcommit: d8e23557224bc50a82a36dc80ac68b9d11dfdde9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415875"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720076"
 ---
 # <a name="troubleshooting-in-windows-terminal"></a>Problembehandlung in Windows Terminal
 
@@ -71,3 +71,7 @@ Wenn Sie dieses Feature deaktivieren möchten, damit `Ctrl+=` richtig funktionie
 Ändern Sie die Option „Tastaturlayout wechseln“ in „Nicht zugewiesen“ (oder deaktivieren Sie <kbd>STRG+UMSCHALT</kbd>), und wählen Sie dann **OK** sowie **Übernehmen** aus. <kbd>STRG+UMSCHALT+0</kbd> sollte jetzt als Tastenzuordnung funktionieren und wird an das Terminal weitergegeben.
 
 Wenn Sie andererseits dieses Abkürzungstastenfeature für mehrere Eingabesprachen verwenden, können Sie [eine eigene benutzerdefinierte Tastenzuordnung](./customize-settings/key-bindings.md) in Ihrer Datei „settings.json“ konfigurieren.
+
+## <a name="the-text-is-blurry"></a>Der Text ist verschwommen
+
+Einige Anzeigetreiber und Hardwarekombinationen können Scrollbereiche und/oder geänderte Bereiche nicht verarbeiten, ohne dass die Daten aus dem vorhergehenden Einzelbild verschwimmen. Um dieses Problem zu entschärfen, können Sie eine Kombination [dieser globalen Renderingeinstellungen](./customize-settings/global-settings.md#rendering-settings) hinzufügen, um die vom Terminaltextrenderer verursachte Auslastung Ihrer Hardware zu verringern.

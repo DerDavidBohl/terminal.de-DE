@@ -3,15 +3,15 @@ title: Windows Terminal-Befehlszeilenargumente
 description: Erfahren Sie, wie Sie Befehlszeilenargumente für Windows Terminal erstellen.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 06/18/2020
 ms.topic: how-to
 ms.service: terminal
-ms.openlocfilehash: e30fd547052a87c88b72d015e132e32b1889af05
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: d40b0527bab94289457cf8c8a88931f4df943496
+ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994376"
 ---
 # <a name="using-command-line-arguments-for-windows-terminal"></a>Verwenden von Befehlszeilenargumenten für Windows Terminal
 
@@ -39,12 +39,20 @@ Im Folgenden finden Sie die vollständige Liste der unterstützten Befehle und O
 | Option | Beschreibung |
 | ------ | ----------- |
 | `--help`, `-h`, `-?`, `/?` | Zeigt die Hilfemeldung an. |
+| `--maximized`, `-M` | Öffnet das Terminal maximiert. |
+| `--fullscreen`, `-F` | Öffnet das Terminal im Vollbildmodus. |
+
+> [!IMPORTANT]
+> `--maximized`, `-M` und `--fullscreen`, `-F` stehen nur in der [Windows Terminal-Vorschau](https://aka.ms/terminal-preview/) zur Verfügung.
 
 | Befehl | Parameter | Beschreibung |
 | ------- | ---------- | ----------- |
-| `new-tab` | `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline` | Erstellt eine neue Registerkarte. |
-| `split-pane` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline` | Unterteilt einen neuen Bereich. |
+| `new-tab` | `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Erstellt eine neue Registerkarte. |
+| `split-pane` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Unterteilt einen neuen Bereich. |
 | `focus-tab` | `--target, -t tab-index` | Setzt den Fokus auf eine bestimmte Registerkarte. |
+
+> [!IMPORTANT]
+> `--title` steht nur in der [Windows Terminal-Vorschau](https://aka.ms/terminal-preview/) zur Verfügung.
 
 ## <a name="command-line-argument-examples"></a>Beispiele für Befehlszeilenargumente
 
@@ -198,6 +206,37 @@ Ausführungsaliase funktionieren nicht in WSL-Distributionen. Wenn Sie „wt.exe
 
 Das Flag `-H` (oder `--horizontal`) gibt an, dass die Bereiche horizontal geteilt werden sollen. Das Flag `-V` (oder `--vertical`) gibt an, dass die Bereiche vertikal geteilt werden sollen.
 
+### <a name="tab-title-preview"></a>Registerkartentitel ([Vorschau](https://aka.ms/terminal-preview/))
+
+Um eine neue Terminalinstanz mit benutzerdefinierten Registerkartentiteln zu öffnen, verwenden Sie das `--title`-Argument. Um beim Öffnen von zwei Registerkarten die Titel beider Registerkarten festzulegen, geben Sie Folgendes ein:
+
+<!-- Start tab selectors. -->
+#### <a name="command-prompt"></a>[Eingabeaufforderung](#tab/windows)
+
+```bash
+wt --title tabname1 ; new-tab -p "Ubuntu-18.04" --title tabname2
+```
+
+#### <a name="powershell"></a>[PowerShell](#tab/powershell)
+
+```powershell
+wt --title tabname1 `; new-tab -p "Ubuntu-18.04" --title tabname2
+```
+
+#### <a name="linux"></a>[Linux](#tab/linux)
+
+```bash
+cmd.exe /c "wt.exe" --title tabname1 \; new-tab -p "Ubuntu-18.04" --title tabname2
+```
+
+Ausführungsaliase funktionieren nicht in WSL-Distributionen. Wenn Sie „wt.exe“ über eine WSL-Befehlszeile verwenden möchten, können Sie es direkt über CMD erstellen, indem Sie `cmd.exe` ausführen. Die Option `/c` weist CMD an, nach der Ausführung zu beenden, und „`\;` Schrägstrich + Semikolon“ trennt Befehle.
+
+---
+<!-- End tab selectors.  -->
+
+> [!IMPORTANT]
+> Diese Funktion steht nur in der [Windows Terminal-Vorschau](https://aka.ms/terminal-preview/) zur Verfügung.
+
 ### <a name="tab-focus"></a>Registerkartenfokus
 
 Verwenden Sie das Flag `-t` (oder `--target`) zusammen mit der Indexnummer der Registerkarte, um eine neue Terminalinstanz mit Fokus auf eine bestimmte Registerkarte zu öffnen. Geben Sie Folgendes ein, um Ihr Standardprofil auf der ersten Registerkarte und das auf der zweiten Registerkarte fokussierte Profil „Ubuntu-18.04“ (`-t 1`) zu öffnen:
@@ -268,6 +307,6 @@ wt new-tab "cmd" `; split-pane -p "Windows PowerShell" `; split-pane -H wsl.exe
 wt --% new-tab cmd ; split-pane -p "Windows PowerShell" ; split-pane -H wsl.exe
 ```
 
-In beiden Beispielen erstellt das neu erstellte Windows Terminal-Fenster das Fenster durch die ordnungsgemäße Analyse aller bereitgestellten Befehlszeilenargumente.
+In beiden Beispielen erstellt das neu erstellte Windows Terminal-Fenster das Fenster durch die ordnungsgemäße Analyse aller angegebenen Befehlszeilenargumente.
 
 Diese Methoden werden derzeit jedoch _nicht_ empfohlen, da PowerShell auf das Schließen des neu erstellten Terminalfensters wartet, bevor die Kontrolle an PowerShell zurückgegeben wird. Standardmäßig wartet PowerShell immer auf das Schließen von Windows Store-Anwendungen (wie Windows Terminal), bevor es zur Eingabeaufforderung zurückkehrt. Beachten Sie, dass dies nicht dem Verhalten der Eingabeaufforderung entspricht, bei dem sofort zur Eingabeaufforderung zurückkehrt wird.

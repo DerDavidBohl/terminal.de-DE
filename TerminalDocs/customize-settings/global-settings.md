@@ -3,18 +3,18 @@ title: 'Windows Terminal: Globale Einstellungen'
 description: Erfahren Sie, wie Sie die globalen Einstellungen in Windows Terminals anpassen.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 06/18/2020
 ms.topic: how-to
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 3cbe4b2b99f8115ff4eeaab5f525de393d7e5eb1
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: ba3197bb8b9466d37c01432b60314a7a00227898
+ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415955"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994308"
 ---
-# <a name="global-settings-in-the-windows-terminal"></a>Globale Einstellungen in Windows Terminal
+# <a name="global-settings-in-windows-terminal"></a>Globale Einstellungen in Windows Terminal
 
 Die unten aufgeführten Eigenschaften betreffen das gesamte Terminalfenster, unabhängig von den Profileinstellungen. Diese sollten im Stammbereich Ihrer settings.json-Datei stehen.
 
@@ -26,9 +26,12 @@ Legen Sie das Standardprofil fest, das geöffnet wird, indem Sie <kbd>STRG+UMSCH
 
 **Erfordernis:** Erforderlich
 
-**Akzeptiert:** GUID als Zeichenfolge
+**Akzeptiert:** GUID- oder Profilname als Zeichenfolge
 
 **Standardwert:** PowerShell-GUID
+
+> [!IMPORTANT]
+> Die Verwendung des Profilnamens für `defaultProfile` ist nur in der [Windows Terminal-Vorschau](https://aka.ms/terminal-preview/) möglich.
 
 <br />
 
@@ -103,13 +106,13 @@ Wenn diese Einstellung auf `true` festgelegt ist, werden Registerkarten immer an
 
 :::row:::
 :::column span="":::
-Hiermit wird die Breite der Registerkarten festgelegt. `"equal"` bewirkt, dass jede Registerkarte dieselbe Breite erhält. `"titleLength"` passt die Größe der einzelnen Registerkarten auf die Länge des Titels an.
+Hiermit wird die Breite der Registerkarten festgelegt. `"equal"` bewirkt, dass jede Registerkarte dieselbe Breite erhält. `"titleLength"` passt die Größe der einzelnen Registerkarten auf die Länge des Titels an. `"compact"` verkleinert jede inaktive Registerkarte auf die Breite des Symbols, wodurch für die aktive Registerkarte mehr Platz zum Anzeigen des vollständigen Titels verbleibt.
 
 **Eigenschaftenname:** `tabWidthMode`
 
 **Erfordernis:** Optional
 
-**Akzeptiert:** `"equal"`, `"titleLength"`
+**Akzeptiert:** `"equal"`, `"titleLength"`, `"compact"`
 
 **Standardwert:** `"equal"`
 
@@ -119,6 +122,9 @@ Hiermit wird die Breite der Registerkarten festgelegt. `"equal"` bewirkt, dass j
 
 :::column-end:::
 :::row-end:::
+
+> [!IMPORTANT]
+> Die `"compact"`-Einstellung steht nur in der [Windows Terminal-Vorschau](https://aka.ms/terminal-preview/) zur Verfügung.
 
 ### <a name="hide-close-all-tabs-popup"></a>Popupfenster „Alle Registerkarten schließen“ ausblenden
 
@@ -147,17 +153,35 @@ ___
 
 ## <a name="launch-settings"></a>Starteinstellungen
 
-### <a name="launch-maximized"></a>Maximiert starten
+### <a name="launch-on-startup-preview"></a>Beim Start öffnen ([Vorschau](https://aka.ms/terminal-preview/))
 
-Hiermit wird definiert, ob das Terminal maximiert gestartet wird, um den gesamten Bildschirm oder ein Fenster auszufüllen.
+Wenn diese Einstellung auf `true` festgelegt ist, ist das Öffnen von Windows Terminal beim Systemstart aktiviert. Das Festlegen der Einstellung auf `false` deaktiviert den Eintrag der Systemstartaufgabe. Hinweis: Wenn der Eintrag der Systemstartaufgabe von Windows Terminal entweder durch eine Organisationsrichtlinie oder durch eine Benutzeraktion deaktiviert ist, hat diese Einstellung keine Wirkung.
+
+**Eigenschaftenname:** `startOnUserLogin`
+
+**Erfordernis:** Optional
+
+**Akzeptiert:** `true`, `false`
+
+**Standardwert:** `false`
+
+> [!IMPORTANT]
+> Diese Funktion steht nur in der [Windows Terminal-Vorschau](https://aka.ms/terminal-preview/) zur Verfügung.
+
+### <a name="launch-size"></a>Startgröße
+
+Hiermit wird definiert, ob das Terminal maximiert, im Vollbildmodus oder in einem Fenster gestartet wird.
 
 **Eigenschaftenname:** `launchMode`
 
 **Erfordernis:** Optional
 
-**Akzeptiert:** `"default"`, `"maximized"`
+**Akzeptiert:** `"default"`, `"maximized"`, `"fullscreen"`
 
 **Standardwert:** `"default"`
+
+> [!IMPORTANT]
+> Die `"fullscreen"`-Einstellung steht nur in der [Windows Terminal-Vorschau](https://aka.ms/terminal-preview/) zur Verfügung.
 
 ### <a name="launch-position"></a>Startposition
 
@@ -316,3 +340,35 @@ Wenn diese Einstellung auf `true` festgelegt ist, wird das Fenster bei einer Gr�
 
 :::column-end:::
 :::row-end:::
+
+<br />
+
+___
+
+## <a name="rendering-settings"></a>Renderingeinstellungen
+
+Wenn Sie die Renderingeinstellungen ändern möchten, finden Sie weitere Informationen zu Ihrer Unterstützung auf der [Seite zur Problembehandlung](./../troubleshooting.md#the-text-is-blurry).
+
+### <a name="screen-redrawing"></a>Neuzeichnen des Bildschirms
+
+Wenn diese Einstellung auf `true` festgelegt wird, zeichnet das Terminal für jedes Einzelbild den gesamten Bildschirm neu. Bei Einstellung auf `false` werden nur die Updates am Bildschirm zwischen den Einzelbildern gerendert.
+
+**Eigenschaftenname:** `experimental.rendering.forceFullRepaint`
+
+**Erfordernis:** Optional
+
+**Akzeptiert:** `true`, `false`
+
+**Standardwert:** `false`
+
+### <a name="software-rendering"></a>Softwarerendering
+
+Wenn diese Einstellung auf `true` festgelegt ist, verwendet das Terminal den Softwarerenderer (auch als WARP bezeichnet) anstelle des Hardwarerenderers.
+
+**Eigenschaftenname:** `experimental.rendering.software`
+
+**Erfordernis:** Optional
+
+**Akzeptiert:** `true`, `false`
+
+**Standardwert:** `false`

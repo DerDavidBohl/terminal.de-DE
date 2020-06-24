@@ -6,12 +6,12 @@ ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: overview
 ms.service: terminal
-ms.openlocfilehash: e9af1ea8445514534c64410fe494d35186d028b5
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: c2d9b8461c168639f1453050e18f0650afb738fb
+ms.sourcegitcommit: d8e23557224bc50a82a36dc80ac68b9d11dfdde9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415855"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720096"
 ---
 # <a name="cascadia-code"></a>Cascadia Code
 
@@ -32,7 +32,7 @@ Es sind mehrere Versionen von Cascadia Code verfügbar, die Ligaturen und Glyphe
 
 Powerline ist ein gängiges Befehlszeilen-Plug-In, mit dem Sie zusätzliche Informationen in Ihrer Eingabeaufforderung anzeigen können. Es verwendet einige zusätzliche Glyphen, um diese Informationen richtig darzustellen. Weitere Informationen zum Einrichten von Powerline für die Eingabeaufforderung finden Sie auf der Seite [Powerline in Windows Terminal](./tutorials/powerline-setup.md).
 
-Programmierligaturen sind Glyphen, die durch Kombinieren von Zeichen erstellt werden. Sie müssen beim Schreiben von Code nützlich sein. Die „Code“-Varianten enthalten Ligaturen, während die „Mono“-Varianten sie ausschließen.
+Programmierligaturen sind Glyphen, die durch Kombinieren von Zeichen erstellt werden. Sie sind insbesondere beim Schreiben von Code nützlich. Die „Code“-Varianten enthalten Ligaturen, während die „Mono“-Varianten sie ausschließen.
 
 ![Cascadia Code: Programmierligaturen](./images/programming-ligatures.gif)
 
